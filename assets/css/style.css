@@ -209,7 +209,11 @@ h2::before {
 }
 
 h2,
-span.activerating { font-weight: 600; }
+span.activerating { 
+  padding-bottom: 15px;
+  font-weight: 600; 
+}
+
 span.activerating { display: block; }
 /*=================================
   main styling ends here
