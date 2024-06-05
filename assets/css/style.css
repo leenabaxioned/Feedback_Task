@@ -82,8 +82,12 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
   box-sizing: border-box;
   font-family: sans-serif;
+  background-color: #fef9f2;
 }
 
 a { 
@@ -113,7 +117,100 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.container { width: 28%; }
 
+main {
+  padding: 40px 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1,
+.ratings {
+  padding-bottom: 30px;
+}
+
+h1 {
+  color: #080000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  padding: 20px 25px;
+  transition: all 0.5s;
+}
+
+.rating.active,
+.rating:hover {
+  padding: 20px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.emoji::before {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-family: 'Font Awesome\ 5 Free';
+  background-color: #ffc10e;
+  color: #000;
+  font-size: 30px;
+}
+
+.unhappy::before { content: "\f119"; }
+.neutral::before { content: "\f11a"; }
+.satisfied::before { content: "\f118"; }
+
+#send {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #302d2b;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#send:active {
+  background-color: #252220;
+  box-shadow: 0 1px #838383;
+  transform: translateY(1px);
+}
+ 
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+h2::before {
+  font-family: 'Font Awesome\ 5 Free';
+  content: "\f004";
+  color: #ff0000;
+  font-size: 30px;
+}
+
+h2,
+span.activerating { font-weight: 600; }
+span.activerating { display: block; }
 /*=================================
   main styling ends here
 =================================*/
